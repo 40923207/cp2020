@@ -133,12 +133,95 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">PCH3 客戶關係 << <a href='PCH3 客戶關係.html'>Previous</a> <a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Next</a> >> Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神<br /><h1>Overview概述</h1>
-<p>In this lesson we will be discussing the standards of professional business conversations and the basics of customer service. We will discuss the importance of avoiding distractions and the best practices in customer service and communication.</p>
-<p>在本課程中，我們將討論專業商務對話的標準和客戶服務的基礎。我們將討論避免分心的重要性以及客戶服務和溝通中的最佳做法。</p>
-<p>Content has been derived from the STEM Readiness course by the National STEM Consortium under a CC-BY license.</p>
-<p>內容是根據CC-BY許可從國家STEM聯盟的STEM準備課程中獲得的。</p>
-<br />PCH3 客戶關係 << <a href='PCH3 客戶關係.html'>Previous</a> <a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Next</a> >> Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神</div>
+    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <a href='Rock Paper Scissors Solutions剪刀石頭布解決方案.html'>Next</a> >> Rock Paper Scissors Solutions剪刀石頭布解決方案<br /><h1>List Comprehensions Solutions列表理解</h1>
+<p></p>
+<p> <strong><b>Exercise 7練習七</b></strong></p>
+<p> Let's say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. Write one line of Python that takes this list a and makes a new list that has only the even elements of this list in it.</p>
+<p>假設我給你一份用變量保存的清單:a=[1,4,9,16,25,36,49,64,81,100]。 寫一行蟒蛇把這個列表取a,並編制新的列表,其中只有這個列表中的偶數成分。</p>
+<p> <strong><b>Sample solutions樣本解</b></strong></p>
+<p>For the meat of the solution, check this out:</p>
+<p>關於溶液的肉,請看這個: <img alt="" height="59" src="./../images/7-1..PNG" width="797"/></p>
+<p>And for a "complete" solution, look at this:</p>
+<p>至於"完全"的解決方案,請看這個:</p>
+<p><img alt="" height="170" src="./../images/7-2..PNG" width="798"/></p>
+<p> For a solution that uses the random library to generate test lists, check this out:</p>
+<p>要用隨機庫生成測試列表的解,請檢查這個:</p>
+<p><img alt="" height="348" src="./../images/7-3..PNG" width="802"/></p>
+<br/><br/><br/><br/><strong><b>Rock Paper Scissors</b></strong><strong><b> </b></strong><strong><b>剪刀石頭布</b></strong>
+<p><strong><b></b></strong></p>
+<p><strong><b> </b></strong><strong><b>Exercise 8 (and Solution)練習八(及解決方法)</b></strong></p>
+<p>Make a two-player Rock- Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a message of con gratulations to the winner, and ask if the players want to start a new game)</p>
+<p>做個兩面派搖滾剪刀遊戲。 (提示:要求播放器播放(使用輸入),比較一下,打印出一個致勝者的祝賀信息,並詢問選手是否願意開始新遊戲)</p>
+<p>Remember the rules:記住規則:</p>
+<p>ㆍRock beats scissors石頭贏剪刀</p>
+<p>ㆍScissors beats paper剪刀贏布</p>
+<p>ㆍPaper beats rock布贏石頭</p>
+<p><strong><b>Discussion討論</b></strong></p>
+<p>Concepts for this week:本週的概念:</p>
+<p>ㆍWhile loops圈圈</p>
+<p>ㆍInfinite loops無限循環</p>
+<p>ㆍBreak statements中斷聲明</p>
+<p><strong><b>While loops</b></strong><strong><b>  </b></strong><strong><b>While</b></strong><strong><b>循環</b></strong></p>
+<p>We have already discussed for loops, or loops that look sequentially (one by one) at elements in a list.</p>
+<p>我們已經討論過要按順序(逐個)看列表中的元素的圓環。</p>
+<p>There is a second type of loop that works in a slightly different way called a while loop.</p>
+<p>有一宗案件:以一種略微不同的方式工作的第二種環路,稱爲"同時環"。</p>
+<p>The idea is simple: while a certain condition is True, keep doing something. For example:</p>
+<p>想法很簡單:儘管某種條件是真實的,但要繼續做點什麼。 例如:</p>
+<p>a = 5</p>
+<p>while (a &gt; 0):</p>
+<p>  print(a)</p>
+<p>  a -= 1</p>
+<p>The output of this code segment is:</p>
+<p>這個代碼段的輸出是:</p>
+<p>5</p>
+<p>4</p>
+<p>3</p>
+<p>2</p>
+<p>1</p>
+<p>A particularly useful way to use while loops is checking user input for correctness. For example:</p>
+<p>當循環使用時,一個特別有用的方法是檢查用戶輸入是否正確。 例如:</p>
+<p>quit = input('Type "enter" to quit:' )</p>
+<p>while quit != "enter":</p>
+<p>quit = input('Type "enter" to quit:' )</p>
+<p>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
+<p>這個用途是無限的,可以(也應該!)與條件結合,產生最有效的效果。</p>
+<p><strong><b>Infinite loops無限環路</b></strong></p>
+<p>An infinite loop is a loop that never stops.</p>
+<p>無窮循環是永不停息的循環。</p>
+<p>This means that the condition in the beginning of the while loop will always be true.</p>
+<p>這意味着,當環路開始時,環路中的條件會改變始終如一</p>
+<p>For example:例如:</p>
+<p>i = 5</p>
+<p>while i &gt; 0:</p>
+<p>  print("Inside the loop")</p>
+<p>What will happen is the loop will print out the phrase "Inside the loop" forever and ever. If you are running your computer, you will have to "'kill the program" to stop it.Each operating system has a different way of "kiling a progtam" to get out of an infinite loop.</p>
+<p>將會發生的是,環路將永遠打印出"圈內"這個短語。如果你在跑步，在你的電腦上,你必須"殺掉程式"才能阻止它。每個操作系統都有不同的方式“殺死程序”以擺脫無限循環。</p>
+<p> </p>
+<p>On Linux: in the terminal, type "CTRL-C" to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press "CTRL-D" to exit your running program. When in doubt, do a Google search before you start programming!</p>
+<p>在Linux上:在終端上鍵入"CTRL-C",以殺死當前正在運行的程序如果你是使用IDLE Python IDE,然後按"CTRL-D"鍵退出運行程序。 如有疑問,可按以下連結進行:在開始編程之前,先搜索谷歌!</p>
+<p> </p>
+<p>On Windows: type "CIRL-ALI-DEL" and open the task manager to kill the program.</p>
+<p>在視窗上:鍵入"CIRL-ALI-DEL"並打開任務管理器以殺死程序。</p>
+<p>On Mac: right-click on the task, and kill the program that is running forever.</p>
+<p>在Mac上:右鍵單擊任務,並殺死運行已久的程序。</p>
+<p>If you find yourself in an infinite loop, your program will never end.</p>
+<p>如果你發現自己陷入無限循環,你的程序將永無休止。</p>
+<p><strong><b>Break statements決斷語句</b></strong></p>
+<p>A break statement stops the execution of a loop before the original condition is met. While the use of a break statement will often start an argument about good coding practices, sometimes it is useful.</p>
+<p>斷開語句在滿足原始條件之前停止執行循環。 休息時聲明往往會引發關於良好編碼做法的爭論,有時它是有用的。</p>
+<p>For example:例如:</p>
+<p>while True:</p>
+<p>usr_command = input("Enter your command: ")</p>
+<p>if usr_command == "quit":</p>
+<p>break</p>
+<p>else:</p>
+<p>print("You typed " t usr_command)</p>
+<p>In this case, the break statemnent is used to break off the "infinite while loop" that we have constructed with the while True statemment.</p>
+<p>在這種情況下,break 狀態全數被用來斷開我們與the</p>
+<p>而真正的國度。</p>
+<p><b> </b></p>
+<br />HW3 << <a href='HW3.html'>Previous</a> <a href='Rock Paper Scissors Solutions剪刀石頭布解決方案.html'>Next</a> >> Rock Paper Scissors Solutions剪刀石頭布解決方案</div>
         
     <!-- footer -->
       <div class="container">

@@ -133,12 +133,62 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">PCH3 客戶關係 << <a href='PCH3 客戶關係.html'>Previous</a> <a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Next</a> >> Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神<br /><h1>Overview概述</h1>
-<p>In this lesson we will be discussing the standards of professional business conversations and the basics of customer service. We will discuss the importance of avoiding distractions and the best practices in customer service and communication.</p>
-<p>在本課程中，我們將討論專業商務對話的標準和客戶服務的基礎。我們將討論避免分心的重要性以及客戶服務和溝通中的最佳做法。</p>
-<p>Content has been derived from the STEM Readiness course by the National STEM Consortium under a CC-BY license.</p>
-<p>內容是根據CC-BY許可從國家STEM聯盟的STEM準備課程中獲得的。</p>
-<br />PCH3 客戶關係 << <a href='PCH3 客戶關係.html'>Previous</a> <a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Next</a> >> Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神</div>
+    <div id="tipue_search_content">List Comprehensions Solutions列表理解 << <a href='List Comprehensions Solutions列表理解.html'>Previous</a> <a href='Guessing Game One Solutions猜想遊戲一解決方案.html'>Next</a> >> Guessing Game One Solutions猜想遊戲一解決方案<br /><h1>Rock Paper Scissors Solutions剪刀石頭布解決方案</h1>
+<p></p>
+<p><strong><b>Exercise 8練習八</b></strong></p>
+<p> Make a trwo- player Rock- Paper-Scissors game. (Hint: Ask for player plays (using input),compare them, print out a message of congratulations to the winner, and ask if the players toant to</p>
+<p>start a new game)</p>
+<p>做一個玩剪紙遊戲的人。 (提示:要求播放機播放(使用輸入),比較,然後列印賀詞給獲勝者,然後問運動員是否表示同意?</p>
+<p>開始新遊戲)</p>
+<p> </p>
+<p>Remember the rules:記住規則:</p>
+<p>ㆍRock beats scissors石頭贏剪刀</p>
+<p>ㆍScissors beats paper剪刀贏布</p>
+<p>ㆍPaper beats rock布贏石頭</p>
+<p><strong><b>Sample solution樣本溶液</b></strong></p>
+<p> <img alt="" height="700" src="./../images/8-2..PNG" width="652"/></p>
+<p> Another sample solution uses a clever way of checking the winner:</p>
+<p>另一種樣品溶液使用一種巧妙的方法來檢驗獲勝者:</p>
+<p> <img alt="" height="698" src="./../images/8-4..PNG" width="799"/></p>
+<br/><br/><br/><strong><b>Guessing Game One</b></strong><strong><b> </b></strong><strong><b>猜一局</b></strong>
+<p><strong><b></b></strong></p>
+<p><strong><b>Exercise 9 (and </b></strong><span><a href="https://www.practicepython.org/solution/2014/04/10/09-guessing-game-one-solutions.html"><strong><b>Solution</b></strong></a></span><strong><b>)</b></strong><strong><b>練習9（和解決方案）</b></strong></p>
+<p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (Hint: remember to use the user input lessons from thevery first exercise)</p>
+<p>在1到9之間產生隨機數(包括1到9)。 請用戶猜數字,然後告訴用戶</p>
+<p>他們是否猜得過低,過高或完全正確(提示:請記住使用"互聯網資訊站"的輸入教訓)。</p>
+<p>首次練習)</p>
+<p>Extras:附加功能：</p>
+<p>ㆍKeep the game going until the user types "exit"</p>
+<ul>
+<li>保持遊戲進行到用戶輸入"退出"爲止</li>
+</ul>
+<p>ㆍKeep track of how many guesses the user has taken, and when the game ends, print this out.</p>
+<ul>
+<li>記錄用戶進行了多少猜測,當遊戲結束時,把這個打印出來。</li>
+</ul>
+<p><strong><b>Discussion討論</b></strong></p>
+<p>Concepts for this week:本週的概念:</p>
+<p>ㆍModules模塊</p>
+<p>ㆍRandom numbers隨機數</p>
+<p>ㆍUser input用戶輸入</p>
+<p><strong><b>Random Numbers (and Modules)隨機數字(和模塊)</b></strong></p>
+<p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called modules. The thing we want from a mnodule in this exercise is the ability to generate random numbers. This comes from the random numbers.This comes from the random module.</p>
+<p>這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從小結中獲得的東西是產生隨機數的能力。這來自隨機數，這來自隨機模塊。</p>
+<p>To use a module, at the top of your file, type使用模塊,在文件頂部鍵入</p>
+<p>import random</p>
+<p>This means you are allowing your Python program to use a mod ule called random in the rest of your code.</p>
+<p>這意味着你允許你的蟒蛇程序在剩下的代碼中使用一個稱爲隨機模態。</p>
+<p>To use it (and generate a random integer), now type:</p>
+<p>要使用它(併產生一個隨機整數),現在鍵入:</p>
+<p>a = random. randint(2, 6)</p>
+<p>Once you run this program, the variable a will have a random integer that the computer made for you, bettween 2 and 6 (including 2 and 6). The specific documentation for this method is here.</p>
+<p>一旦運行這個程序,變量a將有一個計算機爲你製造的隨機整數,bett2之間。及6個(包括2個及6宗)。 這個方法的具體文件在這裏。</p>
+<p>There are many ways you can generate random numbers - integers, decimals, and much more. The Python</p>
+<p>documentation has much more detailed information about what is possible from the random module.</p>
+<p>有很多方法可以產生隨機數,整數,十進制等等。 蟒蛇</p>
+<p>文檔中有關隨機模塊可能包含的更詳細的資料。</p>
+<p><strong><b><b> </b></b></strong></p>
+<br />List Comprehensions Solutions列表理解 << <a href='List Comprehensions Solutions列表理解.html'>Previous</a> <a href='Guessing Game One Solutions猜想遊戲一解決方案.html'>Next</a> >> Guessing Game One Solutions猜想遊戲一解決方案</div>
         
     <!-- footer -->
       <div class="container">
