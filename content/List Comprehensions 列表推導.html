@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='每周進度.html'>每周進度</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W4-9.html'>W4-9</a><li><a href='W7.html'>W7</a></li></ul><li class='has-children'><a href='關於.html'>關於</a><ul class='dropdown'><li><a href='測試.html'>測試</a></li></ul><li class='has-children'><a href='PCH3 客戶關係.html'>PCH3 客戶關係</a><ul class='dropdown'><li><a href='Overview概述.html'>Overview概述</a><li><a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神</a><li><a href='Effective Listening 有效聆聽.html'>Effective Listening 有效聆聽</a><li><a href='Taking Ownership 取得所有權.html'>Taking Ownership 取得所有權</a><li><a href='Remain Courteous and Professional 保持禮貌和專業.html'>Remain Courteous and Professional 保持禮貌和專業</a><li><a href='Problem Resolution and Follow-Up 問題解決與跟進.html'>Problem Resolution and Follow-Up 問題解決與跟進</a><li><a href='Proper Treatment of a Customer’s Property 妥善處理客戶財產.html'>Proper Treatment of a Customer’s Property 妥善處理客戶財產</a><li><a href='Putting it All Together放在一起.html'>Putting it All Together放在一起</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='List Comprehensions 列表推導.html'>List Comprehensions 列表推導</a><ul class='dropdown'><li><a href='List Comprehensions 列表理解.html'>List Comprehensions 列表理解</a></li></ul><li class='has-children'><a href='Rock Paper Scissors 剪刀石頭布.html'>Rock Paper Scissors 剪刀石頭布</a><ul class='dropdown'><li><a href='Rock Paper Scissors Solutions 剪刀石頭布解決方案.html'>Rock Paper Scissors Solutions 剪刀石頭布解決方案</a></li></ul><li class='has-children'><a href='Guessing Game One Solutions 猜想遊戲.html'>Guessing Game One Solutions 猜想遊戲</a><ul class='dropdown'><li><a href='Guessing Game One Solutions 猜想遊戲解決方案.html'>Guessing Game One Solutions 猜想遊戲解決方案</a></li>
+                     <li class='has-children'><a href='First.html'>First</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W4-9.html'>W4-9</a><li><a href='W7.html'>W7</a></li></ul><li class='has-children'><a href='關於.html'>關於</a><ul class='dropdown'><li><a href='測試.html'>測試</a></li></ul><li class='has-children'><a href='PCH3 客戶關係.html'>PCH3 客戶關係</a><ul class='dropdown'><li><a href='Overview概述.html'>Overview概述</a><li><a href='Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神.html'>Operational Procedures  Communication Methods and Professionalismhl 操作程序 溝通方法和專業精神</a><li><a href='Effective Listening 有效聆聽.html'>Effective Listening 有效聆聽</a><li><a href='Taking Ownership 取得所有權.html'>Taking Ownership 取得所有權</a><li><a href='Remain Courteous and Professional 保持禮貌和專業.html'>Remain Courteous and Professional 保持禮貌和專業</a><li><a href='Problem Resolution and Follow-Up 問題解決與跟進.html'>Problem Resolution and Follow-Up 問題解決與跟進</a><li><a href='Proper Treatment of a Customer’s Property 妥善處理客戶財產.html'>Proper Treatment of a Customer’s Property 妥善處理客戶財產</a><li><a href='Putting it All Together放在一起.html'>Putting it All Together放在一起</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li class='has-children'><a href='List Comprehensions 列表推導.html'>List Comprehensions 列表推導</a><ul class='dropdown'><li><a href='List Comprehensions 列表理解.html'>List Comprehensions 列表理解</a></li></ul><li class='has-children'><a href='Rock Paper Scissors 剪刀石頭布.html'>Rock Paper Scissors 剪刀石頭布</a><ul class='dropdown'><li><a href='Rock Paper Scissors Solutions 剪刀石頭布解決方案.html'>Rock Paper Scissors Solutions 剪刀石頭布解決方案</a></li></ul><li class='has-children'><a href='Guessing Game One Solutions 猜想遊戲.html'>Guessing Game One Solutions 猜想遊戲</a><ul class='dropdown'><li><a href='Guessing Game One Solutions 猜想遊戲解決方案.html'>Guessing Game One Solutions 猜想遊戲解決方案</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,23 +147,19 @@ img.add_border {
 <p>列表理解的概念是使代碼更緊湊,以完成涉及列表的任務。</p>
 <p>Take for example this code:</p>
 <p>拿去舉例來說:</p>
-<p>years_of_birth = [1990, 1991, 1990, 1998, 1992, 1991]</p>
-<p>出生年份=[1990,1991,1990,1998,1992,1991]</p>
-<p>ages = []</p>
-<p>年齡=[]</p>
-<p>for year in years_of_birth:</p>
-<p>出生年份:</p>
-<p>ages append(2014 - year)</p>
-<p>年齡附錄(2014年)</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+  ages = []
+  for year in years_of_birth: 
+    ages.append(2014 - year)</pre>
+<p></p>
 <p>And at the end, the variable ages has the list [24, 23, 24, 24, 22, 23]. What this code did was translate the years of birth into ages, and it took us a for loop and an append statement to a new list to do that.</p>
 <p>最後,可變年齡有[24,23,24,24,22,23]的名單。 這個密碼的作用是翻譯歲月</p>
 <p>故此,我們只須提供環形圖及新表的附錄,便可做到這一點。</p>
 <p>Compare to this piece of code:</p>
 <p>比較一下這個代碼:</p>
-<p>years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]</p>
-<p>出生年份=[1990, 1990, 1990, 1992, 1991]</p>
-<p>ages = [2014 - year for year in years_of_birth]</p>
-<p>年齡=[201014-2011年年份_出生年份]</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+  ages = [2014 - year for year in years_of_birth]</pre>
+<p></p>
 <p>The second line here - the line with ages is a list comprehension.</p>
 <p>這裏第二行--有年齡的行是列表理解。</p>
 <p>It accomplishes the same thing as the first code sample - at the end, the ages variable has a list containing [24, 23, 24, 24, 22, 23], the ages corresponding to all the birthdates.</p>

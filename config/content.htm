@@ -1,4 +1,5 @@
-<h1>每周進度</h1>
+<h1>First</h1>
+<p><br/><code> </code>每周進度</p>
 <h2>W1</h2>
 <h2>W2</h2>
 <h2>W3</h2>
@@ -273,23 +274,19 @@
 <p>列表理解的概念是使代碼更緊湊,以完成涉及列表的任務。</p>
 <p>Take for example this code:</p>
 <p>拿去舉例來說:</p>
-<p>years_of_birth = [1990, 1991, 1990, 1998, 1992, 1991]</p>
-<p>出生年份=[1990,1991,1990,1998,1992,1991]</p>
-<p>ages = []</p>
-<p>年齡=[]</p>
-<p>for year in years_of_birth:</p>
-<p>出生年份:</p>
-<p>ages append(2014 - year)</p>
-<p>年齡附錄(2014年)</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+  ages = []
+  for year in years_of_birth: 
+    ages.append(2014 - year)</pre>
+<p></p>
 <p>And at the end, the variable ages has the list [24, 23, 24, 24, 22, 23]. What this code did was translate the years of birth into ages, and it took us a for loop and an append statement to a new list to do that.</p>
 <p>最後,可變年齡有[24,23,24,24,22,23]的名單。 這個密碼的作用是翻譯歲月</p>
 <p>故此,我們只須提供環形圖及新表的附錄,便可做到這一點。</p>
 <p>Compare to this piece of code:</p>
 <p>比較一下這個代碼:</p>
-<p>years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]</p>
-<p>出生年份=[1990, 1990, 1990, 1992, 1991]</p>
-<p>ages = [2014 - year for year in years_of_birth]</p>
-<p>年齡=[201014-2011年年份_出生年份]</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+  ages = [2014 - year for year in years_of_birth]</pre>
+<p></p>
 <p>The second line here - the line with ages is a list comprehension.</p>
 <p>這裏第二行--有年齡的行是列表理解。</p>
 <p>It accomplishes the same thing as the first code sample - at the end, the ages variable has a list containing [24, 23, 24, 24, 22, 23], the ages corresponding to all the birthdates.</p>
@@ -308,13 +305,33 @@
 <p>假設我給你一份用變量保存的清單:a=[1,4,9,16,25,36,49,64,81,100]。 寫一行蟒蛇把這個列表取a,並編制新的列表,其中只有這個列表中的偶數成分。</p>
 <p> <strong><b>Sample solutions樣本解</b></strong></p>
 <p>For the meat of the solution, check this out:</p>
-<p>關於溶液的肉,請看這個: <img alt="" height="59" src="/images/7-1..PNG" width="797"/></p>
+<p>關於溶液的肉,請看這個: </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">b = [element for element in a if element % 2 == 0]</pre>
 <p>And for a "complete" solution, look at this:</p>
 <p>至於"完全"的解決方案,請看這個:</p>
-<p><img alt="" height="170" src="/images/7-2..PNG" width="798"/></p>
-<p> For a solution that uses the random library to generate test lists, check this out:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">__author__ = 'jhunt'
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [number for number in a if number % 2 == 0]
+
+print(b)</pre>
+<p>For a solution that uses the random library to generate test lists, check this out:</p>
 <p>要用隨機庫生成測試列表的解,請檢查這個:</p>
-<p><img alt="" height="348" src="/images/7-3..PNG" width="802"/></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+numlist = []
+list_length = random.randint(5,15)
+
+
+while len(numlist) &lt; list_length:
+    numlist.append(random.randint(1,75))
+    
+
+evenlist = [number for number in numlist if number % 2 == 0] 
+
+print(numlist)
+print(evenlist)</pre>
+<p><br/><br/></p>
 <h2>Rock Paper Scissors 剪刀石頭布</h2>
 <p><strong><b>Exercise 8 (and <a href="https://www.practicepython.org/solution/2014/04/02/08-rock-paper-scissors-solutions.html">Solution</a>)練習八(及解決方法)</b></strong></p>
 <p>Make a two-player Rock- Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a message of con gratulations to the winner, and ask if the players want to start a new game)</p>
@@ -335,23 +352,25 @@
 <p>有一宗案件:以一種略微不同的方式工作的第二種環路,稱爲"同時環"。</p>
 <p>The idea is simple: while a certain condition is True, keep doing something. For example:</p>
 <p>想法很簡單:儘管某種條件是真實的,但要繼續做點什麼。 例如:</p>
-<p>a = 5</p>
-<p>while (a &gt; 0):</p>
-<p>  print(a)</p>
-<p>  a -= 1</p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">a = 5
+  while (a &gt; 0):
+    print(a)
+    a -= 1</pre>
 <p>The output of this code segment is:</p>
 <p>這個代碼段的輸出是:</p>
-<p>5</p>
-<p>4</p>
-<p>3</p>
-<p>2</p>
-<p>1</p>
-<p>A particularly useful way to use while loops is checking user input for correctness. For example:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">5
+4
+3
+2
+1</pre>
+<p><br/>A particularly useful way to use while loops is checking user input for correctness. For example:</p>
 <p>當循環使用時,一個特別有用的方法是檢查用戶輸入是否正確。 例如:</p>
-<p>quit = input('Type "enter" to quit:' )</p>
-<p>while quit != "enter":</p>
-<p>quit = input('Type "enter" to quit:' )</p>
-<p>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">quit = input('Type "enter" to quit:' )
+  while quit != "enter":
+    quit = input('Type "enter" to quit:' )</pre>
+<p><br/>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
 <p>這個用途是無限的,可以(也應該!)與條件結合,產生最有效的效果。</p>
 <p><strong><b>Infinite loops無限環路</b></strong></p>
 <p>An infinite loop is a loop that never stops.</p>
@@ -359,10 +378,11 @@
 <p>This means that the condition in the beginning of the while loop will always be true.</p>
 <p>這意味着,當環路開始時,環路中的條件會改變始終如一</p>
 <p>For example:例如:</p>
-<p>i = 5</p>
-<p>while i &gt; 0:</p>
-<p>  print("Inside the loop")</p>
-<p>What will happen is the loop will print out the phrase "Inside the loop" forever and ever. If you are running your computer, you will have to "'kill the program" to stop it.Each operating system has a different way of "kiling a progtam" to get out of an infinite loop.</p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">i = 5
+  while i &gt; 0:
+    print("Inside the loop")</pre>
+<p><br/>What will happen is the loop will print out the phrase "Inside the loop" forever and ever. If you are running your computer, you will have to "'kill the program" to stop it.Each operating system has a different way of "kiling a progtam" to get out of an infinite loop.</p>
 <p>將會發生的是,環路將永遠打印出"圈內"這個短語。如果你在跑步，在你的電腦上,你必須"殺掉程式"才能阻止它。每個操作系統都有不同的方式“殺死程序”以擺脫無限循環。</p>
 <p> </p>
 <p>On Linux: in the terminal, type "CTRL-C" to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press "CTRL-D" to exit your running program. When in doubt, do a Google search before you start programming!</p>
@@ -378,13 +398,14 @@
 <p>A break statement stops the execution of a loop before the original condition is met. While the use of a break statement will often start an argument about good coding practices, sometimes it is useful.</p>
 <p>斷開語句在滿足原始條件之前停止執行循環。 休息時聲明往往會引發關於良好編碼做法的爭論,有時它是有用的。</p>
 <p>For example:例如:</p>
-<p>while True:</p>
-<p>usr_command = input("Enter your command: ")</p>
-<p>if usr_command == "quit":</p>
-<p>break</p>
-<p>else:</p>
-<p>print("You typed " t usr_command)</p>
-<p>In this case, the break statemnent is used to break off the "infinite while loop" that we have constructed with the while True statemment.</p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">while True: 
+    usr_command = input("Enter your command: ")
+    if usr_command == "quit":
+      break
+    else: 
+      print("You typed " + usr_command)</pre>
+<p><br/>In this case, the break statemnent is used to break off the "infinite while loop" that we have constructed with the while True statemment.</p>
 <p>在這種情況下,break 狀態全數被用來斷開我們與the</p>
 <p>而真正的國度。</p>
 <h3>Rock Paper Scissors Solutions 剪刀石頭布解決方案</h3>
@@ -399,10 +420,70 @@
 <p>ㆍScissors beats paper剪刀贏布</p>
 <p>ㆍPaper beats rock布贏石頭</p>
 <p><strong><b>Sample solution樣本溶液</b></strong></p>
-<p> <img alt="" height="700" src="/images/8-2..PNG" width="652"/></p>
-<p> Another sample solution uses a clever way of checking the winner:</p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
+
+user1 = input("What's your name?")
+user2 = input("And your name?")
+user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+
+def compare(u1, u2):
+    if u1 == u2:
+        return("It's a tie!")
+    elif u1 == 'rock':
+        if u2 == 'scissors':
+            return("Rock wins!")
+        else:
+            return("Paper wins!")
+    elif u1 == 'scissors':
+        if u2 == 'paper':
+            return("Scissors win!")
+        else:
+            return("Rock wins!")
+    elif u1 == 'paper':
+        if u2 == 'rock':
+            return("Paper wins!")
+        else:
+            return("Scissors win!")
+    else:
+        return("Invalid input! You have not entered rock, paper or scissors, try again.")
+        sys.exit()
+
+print(compare(user1_answer, user2_answer))</pre>
+<p><br/> Another sample solution uses a clever way of checking the winner:</p>
 <p>另一種樣品溶液使用一種巧妙的方法來檢驗獲勝者:</p>
-<p> <img alt="" height="698" src="/images/8-4..PNG" width="799"/></p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print('''Please pick one:
+            rock
+            scissors
+            paper''')
+
+while True:
+    game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+    player_a = str(input("Player a: "))
+    player_b = str(input("Player b: "))
+    a = game_dict.get(player_a)
+    b = game_dict.get(player_b)
+    dif = a - b
+
+    if dif in [-1, 2]:
+        print('player a wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    elif dif in [-2, 1]:
+        print('player b wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    else:
+        print('Draw.Please continue.')
+        print('')</pre>
 <h2><strong><b>Guessing Game One Solutions 猜想遊戲</b></strong></h2>
 <p><strong><b>Exercise 9 (and </b></strong><span><a href="https://www.practicepython.org/solution/2014/04/10/09-guessing-game-one-solutions.html"><strong><b>Solution</b></strong></a></span><strong><b>)</b></strong><strong><b>練習9（和解決方案）</b></strong></p>
 <p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (Hint: remember to use the user input lessons from thevery first exercise)</p>
@@ -427,13 +508,13 @@
 <p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called modules. The thing we want from a mnodule in this exercise is the ability to generate random numbers. This comes from the random numbers.This comes from the random module.</p>
 <p>這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從小結中獲得的東西是產生隨機數的能力。這來自隨機數，這來自隨機模塊。</p>
 <p>To use a module, at the top of your file, type使用模塊,在文件頂部鍵入</p>
-<p>import random</p>
-<p>This means you are allowing your Python program to use a mod ule called random in the rest of your code.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random</pre>
+<p><br/>This means you are allowing your Python program to use a mod ule called random in the rest of your code.</p>
 <p>這意味着你允許你的蟒蛇程序在剩下的代碼中使用一個稱爲隨機模態。</p>
 <p>To use it (and generate a random integer), now type:</p>
 <p>要使用它(併產生一個隨機整數),現在鍵入:</p>
-<p>a = random. randint(2, 6)</p>
-<p>Once you run this program, the variable a will have a random integer that the computer made for you, bettween 2 and 6 (including 2 and 6). The specific documentation for this method is here.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">a = random.randint(2, 6)</pre>
+<p><br/>Once you run this program, the variable a will have a random integer that the computer made for you, bettween 2 and 6 (including 2 and 6). The specific documentation for this method is here.</p>
 <p>一旦運行這個程序,變量a將有一個計算機爲你製造的隨機整數,bett2之間。及6個(包括2個及6宗)。 這個方法的具體文件在這裏。</p>
 <p>There are many ways you can generate random numbers - integers, decimals, and much more. The Python</p>
 <p>documentation has much more detailed information about what is possible from the random module.</p>
@@ -449,11 +530,88 @@
 <p><strong><b>Sample solution樣本溶液</b></strong></p>
 <p>Great example of a solution including both extras!</p>
 <p>包括兩個附加的解決方案的好例子!</p>
-<p> <img alt="" height="545" src="/images/9-2.PNG" width="803"/></p>
-<p>And another:</p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+
+while guess != number and guess != "exit":
+    guess = input("What's your guess?")
+    
+    if guess == "exit":
+        break
+    
+    guess = int(guess)
+    count += 1
+    
+    if guess &lt; number:
+        print("Too low!")
+    elif guess &gt; number:
+        print("Too high!")
+    else:
+        print("You got it!")
+        print("And it only took you",count,"tries!")</pre>
+<p><br/>And another:</p>
 <p>還有一個</p>
-<p> <img alt="" height="525" src="/images/9-4.PNG" width="798"/></p>
-<p>And another, with lots of helpful text!</p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+rd = random.randint(1,9)
+guess = 0
+c = 0
+while guess != rd and guess != "exit":
+    guess = input("Enter a guess between 1 to 9")
+
+    if guess == "exit":
+        break
+
+    guess = int(guess)
+    c += 1
+
+    if guess &lt; rd:
+        print("Too low")
+    elif guess &gt; rd:
+        print("Too high")
+    else:
+        print("Right!")
+        print("You took only", c, "tries!")
+input()</pre>
+<p><br/>And another, with lots of helpful text!</p>
 <p>還有一個,還有許多有用的文章!</p>
-<p> <img alt="" height="740" src="/images/9-5.PNG" width="797"/></p>
-<p><strong><b></b></strong></p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+# Awroken
+
+MINIMUM = 1
+MAXIMUM = 9
+NUMBER = random.randint(MINIMUM, MAXIMUM)
+GUESS = None
+ANOTHER = None
+TRY = 0
+RUNNING = True
+
+print "Alright..."
+
+while RUNNING:
+    GUESS = raw_input("What is your lucky number? ")
+    if int(GUESS) &lt; NUMBER:
+        print "Wrong, too low."
+    elif int(GUESS) &gt; NUMBER:
+        print "Wrong, too high."
+    elif GUESS.lower() == "exit":
+        print "Better luck next time."
+    elif int(GUESS) == NUMBER:
+        print "Yes, that's the one, %s." % str(NUMBER)
+        if TRY &lt; 2:
+            print "Impressive, only %s tries." % str(TRY)
+        elif TRY &gt; 2 and TRY &lt; 10:
+            print "Pretty good, %s tries." % str(TRY)
+        else:
+            print "Bad, %s tries." % str(TRY)
+        RUNNING = False
+    TRY += 1</pre>
+<p><strong><b> </b></strong></p>
