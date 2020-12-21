@@ -260,6 +260,13 @@
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">如果有可用的選件，請在邏輯上將其與估計的成本，維修時間和工作站的未來服務時間一起提供。</span><span style="vertical-align: inherit;">向客戶提供服務時，請始終提供有關所提供服務的文檔。</span></span></p>
 <p>如果有可用的選件，請在邏輯上將其與估計的成本，維修時間和工作站的未來服務時長一起提供。向客戶提供服務時，請始終提供有關所提供服務的文檔。</p>
 <h1>HW2</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776
+import urllib.request  # the lib that handles the url stuff
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(target_url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)</pre>
 <h1>HW3</h1>
 <h2>List Comprehensions 列表推導</h2>
 <p><strong><b>Exercise 7 (and </b></strong><span><a href="https://www.practicepython.org/solution/2014/03/26/07-list-comprehensions-solutions.html"><strong><b>Solution</b></strong></a></span><strong><b>)練習七(及解決方案)</b></strong></p>

@@ -134,6 +134,13 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Putting it All Together放在一起 << <a href='Putting it All Together放在一起.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3<br /><h1>HW2</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776
+import urllib.request  # the lib that handles the url stuff
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(target_url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)</pre>
 <br />Putting it All Together放在一起 << <a href='Putting it All Together放在一起.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3</div>
         
     <!-- footer -->
