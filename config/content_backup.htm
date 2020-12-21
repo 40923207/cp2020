@@ -453,7 +453,37 @@ def compare(u1, u2):
 print(compare(user1_answer, user2_answer))</pre>
 <p><br/> Another sample solution uses a clever way of checking the winner:</p>
 <p>另一種樣品溶液使用一種巧妙的方法來檢驗獲勝者:</p>
-<p> <img alt="" height="698" src="/images/8-4..PNG" width="799"/></p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print('''Please pick one:
+            rock
+            scissors
+            paper''')
+
+while True:
+    game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+    player_a = str(input("Player a: "))
+    player_b = str(input("Player b: "))
+    a = game_dict.get(player_a)
+    b = game_dict.get(player_b)
+    dif = a - b
+
+    if dif in [-1, 2]:
+        print('player a wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    elif dif in [-2, 1]:
+        print('player b wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    else:
+        print('Draw.Please continue.')
+        print('')</pre>
 <h2><strong><b>Guessing Game One Solutions 猜想遊戲</b></strong></h2>
 <p><strong><b>Exercise 9 (and </b></strong><span><a href="https://www.practicepython.org/solution/2014/04/10/09-guessing-game-one-solutions.html"><strong><b>Solution</b></strong></a></span><strong><b>)</b></strong><strong><b>練習9（和解決方案）</b></strong></p>
 <p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (Hint: remember to use the user input lessons from thevery first exercise)</p>
@@ -478,13 +508,13 @@ print(compare(user1_answer, user2_answer))</pre>
 <p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called modules. The thing we want from a mnodule in this exercise is the ability to generate random numbers. This comes from the random numbers.This comes from the random module.</p>
 <p>這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從小結中獲得的東西是產生隨機數的能力。這來自隨機數，這來自隨機模塊。</p>
 <p>To use a module, at the top of your file, type使用模塊,在文件頂部鍵入</p>
-<p>import random</p>
-<p>This means you are allowing your Python program to use a mod ule called random in the rest of your code.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random</pre>
+<p><br/>This means you are allowing your Python program to use a mod ule called random in the rest of your code.</p>
 <p>這意味着你允許你的蟒蛇程序在剩下的代碼中使用一個稱爲隨機模態。</p>
 <p>To use it (and generate a random integer), now type:</p>
 <p>要使用它(併產生一個隨機整數),現在鍵入:</p>
-<p>a = random. randint(2, 6)</p>
-<p>Once you run this program, the variable a will have a random integer that the computer made for you, bettween 2 and 6 (including 2 and 6). The specific documentation for this method is here.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">a = random.randint(2, 6)</pre>
+<p><br/>Once you run this program, the variable a will have a random integer that the computer made for you, bettween 2 and 6 (including 2 and 6). The specific documentation for this method is here.</p>
 <p>一旦運行這個程序,變量a將有一個計算機爲你製造的隨機整數,bett2之間。及6個(包括2個及6宗)。 這個方法的具體文件在這裏。</p>
 <p>There are many ways you can generate random numbers - integers, decimals, and much more. The Python</p>
 <p>documentation has much more detailed information about what is possible from the random module.</p>
@@ -500,11 +530,88 @@ print(compare(user1_answer, user2_answer))</pre>
 <p><strong><b>Sample solution樣本溶液</b></strong></p>
 <p>Great example of a solution including both extras!</p>
 <p>包括兩個附加的解決方案的好例子!</p>
-<p> <img alt="" height="545" src="/images/9-2.PNG" width="803"/></p>
-<p>And another:</p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+
+while guess != number and guess != "exit":
+    guess = input("What's your guess?")
+    
+    if guess == "exit":
+        break
+    
+    guess = int(guess)
+    count += 1
+    
+    if guess &lt; number:
+        print("Too low!")
+    elif guess &gt; number:
+        print("Too high!")
+    else:
+        print("You got it!")
+        print("And it only took you",count,"tries!")</pre>
+<p><br/>And another:</p>
 <p>還有一個</p>
-<p> <img alt="" height="525" src="/images/9-4.PNG" width="798"/></p>
-<p>And another, with lots of helpful text!</p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+rd = random.randint(1,9)
+guess = 0
+c = 0
+while guess != rd and guess != "exit":
+    guess = input("Enter a guess between 1 to 9")
+
+    if guess == "exit":
+        break
+
+    guess = int(guess)
+    c += 1
+
+    if guess &lt; rd:
+        print("Too low")
+    elif guess &gt; rd:
+        print("Too high")
+    else:
+        print("Right!")
+        print("You took only", c, "tries!")
+input()</pre>
+<p><br/>And another, with lots of helpful text!</p>
 <p>還有一個,還有許多有用的文章!</p>
-<p> <img alt="" height="740" src="/images/9-5.PNG" width="797"/></p>
+<p> </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+# Awroken
+
+MINIMUM = 1
+MAXIMUM = 9
+NUMBER = random.randint(MINIMUM, MAXIMUM)
+GUESS = None
+ANOTHER = None
+TRY = 0
+RUNNING = True
+
+print "Alright..."
+
+while RUNNING:
+    GUESS = raw_input("What is your lucky number? ")
+    if int(GUESS) &lt; NUMBER:
+        print "Wrong, too low."
+    elif int(GUESS) &gt; NUMBER:
+        print "Wrong, too high."
+    elif GUESS.lower() == "exit":
+        print "Better luck next time."
+    elif int(GUESS) == NUMBER:
+        print "Yes, that's the one, %s." % str(NUMBER)
+        if TRY &lt; 2:
+            print "Impressive, only %s tries." % str(TRY)
+        elif TRY &gt; 2 and TRY &lt; 10:
+            print "Pretty good, %s tries." % str(TRY)
+        else:
+            print "Bad, %s tries." % str(TRY)
+        RUNNING = False
+    TRY += 1</pre>
 <p><strong><b> </b></strong></p>
